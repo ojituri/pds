@@ -1,0 +1,166 @@
+# ===============================
+# IMPORT REQUIRED LIBRARIES
+# ===============================
+import pandas as pd
+import numpy as np
+
+# sklearn is allowed ONLY for preprocessing and evaluation
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+
+# =========================================================
+# Q1. FILE HANDLING AND DATA LOADING (Using Pandas + OOP)
+# =========================================================
+class DataLoader:
+    def __init__(self, file):
+        self.file = file
+
+    def load_data(self):
+        # Read dataset from text file
+        df = pd.read_csv(self.file, header=None, names=["f1", "f2", "label"])
+        
+        # Remove malformed or missing rows
+        df = df.dropna()
+
+        return df
+
+
+# =========================================================
+# Q2. EXPLORATORY DATA ANALYSIS (EDA)
+# =========================================================
+class EDA:
+    def __init__(self, df):
+        self.df = df
+
+    def summary(self):
+        # Mean, Median, Std, Min, Max
+        print("\n--- Summary Statistics ---")
+        print(self.df[["f1", "f2"]].describe())
+
+        # Class distribution
+        print("\n--- Class Distribution ---")
+        print(self.df["label"].value_counts())
+
+        # Class-wise feature means
+        print("\n--- Class-wise Feature Mean ---")
+        print(self.df.groupby("label").mean())
+
+
+# =========================================================
+# Q3. DATA PREPROCESSING (NumPy + Pandas + OOP)
+# =========================================================
+class Preprocessor:
+    def __init__(self, df):
+        self.df = df
+
+    def preprocess(self):
+        # Encode categorical labels manually (no sklearn)
+        labels = self.df["label"].unique()
+        label_map = {label: i for i, label in enumerate(labels)}
+        self.df["label"] = self.df["label"].map(label_map)
+
+        # Separate features and target
+        X = self.df[["f1", "f2"]].values
+        y = self.df["label"].values
+
+        # Normalize features using NumPy
+        X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
+
+        # Split dataset into 80:20
+        return train_test_split(X, y, test_size=0.2, random_state=42)
+
+
+# =========================================================
+# Q4. LOGISTIC REGRESSION FROM SCRATCH (NumPy Only)
+# =========================================================
+class LogisticRegressionScratch:
+    def __init__(self, lr=0.1, epochs=1000):
+        self.lr = lr
+        self.epochs = epochs
+
+    def sigmoid(self, z):
+        return 1 / (1 + np.exp(-z))
+
+    def fit(self, X, y):
+        # Initialize parameters
+        self.w = np.zeros(X.shape[1])
+        self.b = 0
+
+        # Training loop
+        for _ in range(self.epochs):
+            linear = np.dot(X, self.w) + self.b
+            y_pred = self.sigmoid(linear)
+
+            # Compute gradients
+            dw = (1 / len(y)) * np.dot(X.T, (y_pred - y))
+            db = (1 / len(y)) * np.sum(y_pred - y)
+
+            # Gradient descent update
+            self.w -= self.lr * dw
+            self.b -= self.lr * db
+
+    def predict(self, X):
+        linear = np.dot(X, self.w) + self.b
+        y_pred = self.sigmoid(linear)
+        return (y_pred >= 0.5).astype(int)
+
+
+# =========================================================
+# Q5. MODEL EVALUATION (OOP + sklearn metrics)
+# =========================================================
+class Evaluator:
+    def __init__(self, y_true, y_pred):
+        self.y_true = y_true
+        self.y_pred = y_pred
+
+    def evaluate(self):
+        accuracy = accuracy_score(self.y_true, self.y_pred)
+        precision = precision_score(self.y_true, self.y_pred, average='weighted')
+        recall = recall_score(self.y_true, self.y_pred, average='weighted')
+        f1 = f1_score(self.y_true, self.y_pred, average='weighted')
+
+        return accuracy, precision, recall, f1
+
+
+# =========================================================
+# MAIN EXECUTION (Q6: PARAMETER TUNING & COMPARISON)
+# =========================================================
+
+# Load data
+loader = DataLoader("data.txt")
+df = loader.load_data()
+
+# Perform EDA
+eda = EDA(df)
+eda.summary()
+
+# Preprocessing
+pre = Preprocessor(df)
+X_train, X_test, y_train, y_test = pre.preprocess()
+
+# -------- Before Tuning --------
+model_before = LogisticRegressionScratch(lr=0.01, epochs=500)
+model_before.fit(X_train, y_train)
+y_pred_before = model_before.predict(X_test)
+
+eval_before = Evaluator(y_test, y_pred_before)
+acc1, pre1, rec1, f11 = eval_before.evaluate()
+
+# -------- After Tuning --------
+model_after = LogisticRegressionScratch(lr=0.1, epochs=1500)
+model_after.fit(X_train, y_train)
+y_pred_after = model_after.predict(X_test)
+
+eval_after = Evaluator(y_test, y_pred_after)
+acc2, pre2, rec2, f12 = eval_after.evaluate()
+
+# Comparison Table
+results = pd.DataFrame({
+    "Metric": ["Accuracy", "Precision", "Recall", "F1-score"],
+    "Before Tuning": [acc1, pre1, rec1, f11],
+    "After Tuning": [acc2, pre2, rec2, f12]
+})
+
+print("\n--- Performance Comparison ---")
+print(results)
