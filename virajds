@@ -1,0 +1,346 @@
+/************************************************************
+ ALL C PROGRAMS IN ONE FILE
+ NOTE:
+ - Only ONE main() function can run at a time.
+ - Comment other main() functions when compiling.
+************************************************************/
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+/************************************************************
+ 1. PROGRAM: Check whether a string is Palindrome
+ LOGIC:
+ - Compare characters from start and end
+ - If mismatch found → Not palindrome
+************************************************************/
+/*
+int main() {
+    char str[100];
+    int i, len, flag = 1;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    len = strlen(str);
+
+    for (i = 0; i < len / 2; i++) {
+        if (str[i] != str[len - i - 1]) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if (flag)
+        printf("Palindrome string\n");
+    else
+        printf("Not a palindrome string\n");
+
+    return 0;
+}
+*/
+
+/************************************************************
+ 2. PROGRAM: Binary Search
+ LOGIC:
+ - Works only on sorted array
+ - Divide search range into halves
+************************************************************/
+/*
+int main() {
+    int a[50], n, key, low = 0, high, mid, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter sorted array:\n");
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    printf("Enter element to search: ");
+    scanf("%d", &key);
+
+    high = n - 1;
+
+    while (low <= high) {
+        mid = (low + high) / 2;
+
+        if (a[mid] == key) {
+            printf("Element found at position %d\n", mid + 1);
+            return 0;
+        } else if (a[mid] < key)
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
+
+    printf("Element not found\n");
+    return 0;
+}
+*/
+
+/************************************************************
+ 3. PROGRAM: Minimum Element in 3D Array
+ LOGIC:
+ - Read elements
+ - Compare each element with minimum
+************************************************************/
+/*
+int main() {
+    int a[2][2][2];
+    int i, j, k, min;
+
+    printf("Enter 3D array elements:\n");
+    for (i = 0; i < 2; i++)
+        for (j = 0; j < 2; j++)
+            for (k = 0; k < 2; k++)
+                scanf("%d", &a[i][j][k]);
+
+    min = a[0][0][0];
+
+    for (i = 0; i < 2; i++)
+        for (j = 0; j < 2; j++)
+            for (k = 0; k < 2; k++)
+                if (a[i][j][k] < min)
+                    min = a[i][j][k];
+
+    printf("Minimum element = %d\n", min);
+    return 0;
+}
+*/
+
+/************************************************************
+ 4. PROGRAM: Full Pyramid Pattern
+ LOGIC:
+ - Print spaces then stars
+************************************************************/
+/*
+int main() {
+    int n, i, j;
+
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= n - i; j++)
+            printf(" ");
+        for (j = 1; j <= 2 * i - 1; j++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+*/
+
+/************************************************************
+ 5. PROGRAM: Inorder Traversal of Binary Search Tree
+ LOGIC:
+ - Left → Root → Right
+************************************************************/
+struct node {
+    int data;
+    struct node *left, *right;
+};
+
+struct node* newNode(int item) {
+    struct node* temp = (struct node*)malloc(sizeof(struct node));
+    temp->data = item;
+    temp->left = temp->right = NULL;
+    return temp;
+}
+
+struct node* insert(struct node* root, int data) {
+    if (root == NULL)
+        return newNode(data);
+    if (data < root->data)
+        root->left = insert(root->left, data);
+    else
+        root->right = insert(root->right, data);
+    return root;
+}
+
+void inorder(struct node* root) {
+    if (root != NULL) {
+        inorder(root->left);
+        printf("%d ", root->data);
+        inorder(root->right);
+    }
+}
+/*
+int main() {
+    struct node* root = NULL;
+
+    root = insert(root, 50);
+    insert(root, 30);
+    insert(root, 70);
+    insert(root, 20);
+    insert(root, 40);
+
+    printf("Inorder Traversal: ");
+    inorder(root);
+    return 0;
+}
+*/
+
+/************************************************************
+ 6. PROGRAM: Quick Sort
+ LOGIC:
+ - Divide array using pivot
+ - Recursively sort parts
+************************************************************/
+/*
+int partition(int a[], int low, int high) {
+    int pivot = a[high];
+    int i = low - 1, j, temp;
+
+    for (j = low; j < high; j++) {
+        if (a[j] <= pivot) {
+            i++;
+            temp = a[i]; a[i] = a[j]; a[j] = temp;
+        }
+    }
+    temp = a[i + 1]; a[i + 1] = a[high]; a[high] = temp;
+    return i + 1;
+}
+
+void quickSort(int a[], int low, int high) {
+    if (low < high) {
+        int pi = partition(a, low, high);
+        quickSort(a, low, pi - 1);
+        quickSort(a, pi + 1, high);
+    }
+}
+
+int main() {
+    int a[50], n, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter array elements:\n");
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    quickSort(a, 0, n - 1);
+
+    printf("Sorted array:\n");
+    for (i = 0; i < n; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}
+*/
+
+/************************************************************
+ 7. PROGRAM: Reverse Singly Linked List (Iterative)
+ LOGIC:
+ - Use three pointers (prev, curr, next)
+************************************************************/
+/*
+struct list {
+    int data;
+    struct list* next;
+};
+
+int main() {
+    struct list *head = NULL, *temp = NULL, *newnode;
+    int n, i, val;
+
+    printf("Enter number of nodes: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        newnode = (struct list*)malloc(sizeof(struct list));
+        scanf("%d", &val);
+        newnode->data = val;
+        newnode->next = NULL;
+
+        if (head == NULL)
+            head = temp = newnode;
+        else {
+            temp->next = newnode;
+            temp = newnode;
+        }
+    }
+
+    struct list *prev = NULL, *curr = head, *next;
+
+    while (curr != NULL) {
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+
+    head = prev;
+
+    printf("Reversed list: ");
+    temp = head;
+    while (temp != NULL) {
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }
+
+    return 0;
+}
+*/
+
+/************************************************************
+ 8. PROGRAM: Frequency of Each Character in String
+ LOGIC:
+ - Use ASCII array of size 256
+************************************************************/
+/*
+int main() {
+    char str[100];
+    int freq[256] = {0}, i;
+
+    printf("Enter string: ");
+    gets(str);
+
+    for (i = 0; str[i] != '\0'; i++)
+        freq[str[i]]++;
+
+    printf("Character frequencies:\n");
+    for (i = 0; i < 256; i++)
+        if (freq[i] != 0)
+            printf("%c = %d\n", i, freq[i]);
+
+    return 0;
+}
+*/
+
+/************************************************************
+ 9. PROGRAM: Bubble Sort
+ LOGIC:
+ - Repeatedly swap adjacent elements
+************************************************************/
+/*
+int main() {
+    int a[50], n, i, j, temp;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter array:\n");
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (a[j] > a[j + 1]) {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("Sorted array:\n");
+    for (i = 0; i < n; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}
+*/
