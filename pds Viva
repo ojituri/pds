@@ -1,0 +1,632 @@
+Below is **ONE COMPLETE COMBINED VIVA NOTES (Questions + Answers together)** covering **Units 1 to 4**, written in **simple language**, **3–4 sentences per answer**, and **perfect for viva**.
+You can **read directly** or **revise last minute**.
+
+---
+
+# 📘 DATA SCIENCE / PYTHON VIVA – COMPLETE NOTES
+
+---
+
+## 🔹 **Unit 1: Python Fundamentals & OOP**
+
+### **1. What is Python? Why is it interpreted?**
+
+Python is a high-level programming language.
+It is interpreted because code is executed line by line.
+No compilation is required.
+Debugging becomes easy.
+
+### **2. Compiler vs Interpreter**
+
+Compiler converts entire code at once.
+Interpreter executes line by line.
+Compiled code runs faster.
+Python uses interpreter.
+
+### **3. Why Python over C/Java?**
+
+Simple syntax and fewer lines.
+Large libraries available.
+Easy learning curve.
+Used in AI, ML, Data Science.
+
+### **4. What is Jupyter Notebook?**
+
+Interactive tool for coding and visualization.
+Shows code, output, text together.
+Used mainly for data analysis.
+Different from IDE.
+
+### **5. What is pip?**
+
+Package manager in Python.
+Installs libraries.
+Example: `pip install numpy`.
+Required for dependency management.
+
+### **6. What is requirements.txt?**
+
+List of project dependencies.
+Used to recreate environment.
+Installed using pip.
+Ensures consistency.
+
+### **7. What is virtual environment?**
+
+Isolated Python environment.
+Avoids dependency conflicts.
+Each project has its own packages.
+Created using virtualenv.
+
+### **8. Python data types**
+
+int, float, string, boolean.
+Also list, tuple, set, dictionary.
+Python is dynamically typed.
+No need to declare type.
+
+### **9. List vs Tuple vs Set vs Dictionary**
+
+List: ordered, mutable.
+Tuple: ordered, immutable.
+Set: unordered, unique values.
+Dictionary: key-value pairs.
+
+### **10. What is mutability?**
+
+Ability to change object.
+List and dict are mutable.
+Tuple and string are immutable.
+Example: list elements can change.
+
+### **11. == vs is**
+
+`==` checks value.
+`is` checks memory location.
+Two values may be equal but different memory.
+`is` checks identity.
+
+### **12. Bitwise operators**
+
+Operate on binary numbers.
+Examples: &, |, ^, ~.
+Used in low-level operations.
+Work bit by bit.
+
+### **13. Membership operators**
+
+`in` and `not in`.
+Check existence in sequence.
+Return True or False.
+Example: `5 in list`.
+
+### **14. for vs while**
+
+for: known iterations.
+while: condition-based.
+for used with sequences.
+while used for dynamic loops.
+
+### **15. Lambda function**
+
+Anonymous one-line function.
+Used for short operations.
+No function name.
+Example: `lambda x: x+1`.
+
+### **16. return vs print**
+
+print displays output.
+return sends value back.
+print does not store value.
+return ends function.
+
+### **17. Recursion**
+
+Function calling itself.
+Used to solve repetitive problems.
+Must have base case.
+Else infinite loop.
+
+---
+
+## 🔹 **OOP in Python**
+
+### **18. What is OOP?**
+
+Programming using objects.
+Uses classes and objects.
+Improves code reusability.
+Python supports OOP.
+
+### **19. Class and Object**
+
+Class is blueprint.
+Object is instance of class.
+Class defines attributes.
+Object uses them.
+
+### **20. Encapsulation**
+
+Hides internal data.
+Uses private variables.
+Improves security.
+Example: bank balance.
+
+### **21. Inheritance**
+
+Child class inherits parent class.
+Reuses code.
+Types: single, multiple, multilevel.
+Improves maintainability.
+
+### **22. Polymorphism**
+
+Same function different behavior.
+Example: `+` operator.
+Improves flexibility.
+Common in OOP.
+
+### **23. Multiple inheritance**
+
+Python supports it.
+One class inherits many classes.
+Uses MRO.
+Avoids ambiguity.
+
+### **24. `__init__()`**
+
+Constructor method.
+Called during object creation.
+Initializes variables.
+Runs automatically.
+
+### **25. `__str__()`**
+
+Returns readable string.
+Used by print().
+User-friendly output.
+Optional method.
+
+### **26. `__str__()` vs `__repr__()`**
+
+str: user readable.
+repr: developer readable.
+repr is detailed.
+repr used if str absent.
+
+### **27. `len()`**
+
+Returns length.
+Works on lists, strings.
+Counts elements.
+Example: len(list).
+
+---
+
+## 🔹 **Dataclass & File Handling**
+
+### **28. Dataclass**
+
+Used to store data.
+Auto creates methods.
+Reduces boilerplate code.
+Introduced in Python 3.7.
+
+### **29. Normal class vs Dataclass**
+
+Normal class needs manual methods.
+Dataclass auto generates methods.
+Dataclass is concise.
+Used for data storage.
+
+### **30. File modes**
+
+r, w, a, x.
+Read, write, append, create.
+b for binary files.
+Used in open().
+
+### **31. read vs readline vs readlines**
+
+read(): whole file.
+readline(): one line.
+readlines(): list of lines.
+Memory usage differs.
+
+### **32. Handling large files**
+
+Read line by line.
+Avoid read().
+Use generators.
+Memory efficient.
+
+### **33. Read/Write CSV**
+
+Using csv module or pandas.
+csv.reader() reads.
+csv.writer() writes.
+Pandas is easier.
+
+### **34. Read Excel**
+
+Using pandas read_excel().
+Supports xls, xlsx.
+Needs openpyxl.
+Easy data handling.
+
+---
+
+## 🔹 **NumPy**
+
+### **35. Why NumPy is faster?**
+
+Uses C internally.
+Fixed data type.
+Vectorized operations.
+Efficient memory.
+
+### **36. ndarray**
+
+Main NumPy array.
+Stores same type elements.
+Supports multi-dimension.
+Fast computation.
+
+### **37. NumPy vs List**
+
+NumPy: fast, same type.
+List: slow, mixed types.
+NumPy supports math ops.
+List is flexible.
+
+### **38. Broadcasting**
+
+Operations on different shapes.
+Smaller array expands.
+Avoids loops.
+Improves speed.
+
+### **39. Slicing**
+
+Extracts array part.
+Uses start:end:step.
+No data copy.
+Efficient.
+
+### **40. Vectorized operations**
+
+Operate on entire array.
+No loops required.
+Faster execution.
+Example: arr+5.
+
+### **41. Dot product**
+
+Multiplies and sums values.
+Used in ML.
+Using numpy.dot().
+Linear algebra concept.
+
+---
+
+## 🔹 **Pandas & EDA**
+
+### **42. Pandas**
+
+Data analysis library.
+Handles structured data.
+Built on NumPy.
+Used for cleaning.
+
+### **43. Series vs DataFrame**
+
+Series: 1D.
+DataFrame: 2D.
+Series is column.
+DataFrame is table.
+
+### **44. loc vs iloc**
+
+loc uses labels.
+iloc uses index.
+loc is label-based.
+iloc is position-based.
+
+### **45. Missing values**
+
+Handled using dropna or fillna.
+Drop removes rows.
+Fill replaces values.
+Depends on data.
+
+### **46. dropna vs fillna**
+
+dropna removes data.
+fillna fills values.
+dropna reduces size.
+fillna keeps data.
+
+### **47. Duplicates**
+
+Removed using drop_duplicates().
+Keeps first by default.
+Improves quality.
+Reduces noise.
+
+### **48. Encoding**
+
+Converts categorical to numeric.
+Models need numbers.
+Label & one-hot encoding.
+Improves learning.
+
+### **49. Normalization vs Standardization**
+
+Normalization: 0 to 1.
+Standardization: mean 0, std 1.
+Normalization uses min-max.
+Standardization uses mean.
+
+### **50. Z-score**
+
+Distance from mean.
+Uses std deviation.
+Detects outliers.
+Z > 3 is outlier.
+
+### **51. IQR**
+
+Q3 - Q1.
+Detects outliers.
+Robust to extremes.
+Uses 1.5×IQR.
+
+---
+
+## 🔹 **EDA Concepts**
+
+### **52. EDA**
+
+Understanding data.
+Uses stats & plots.
+Detects patterns.
+Before modeling.
+
+### **53. Importance of EDA**
+
+Improves accuracy.
+Finds issues.
+Better feature selection.
+Cleaner data.
+
+### **54. Descriptive vs Inferential**
+
+Descriptive summarizes data.
+Inferential draws conclusions.
+Mean is descriptive.
+Hypothesis is inferential.
+
+### **55. Mean, Median, Mode**
+
+Mean: average.
+Median: middle.
+Mode: frequent value.
+Central tendency.
+
+### **56. Skewness**
+
+Measures asymmetry.
+Positive: right tail.
+Negative: left tail.
+Zero: symmetric.
+
+### **57. Correlation**
+
+Measures relationship.
+Range -1 to +1.
+No causation.
+Strength indicator.
+
+### **58. Multicollinearity**
+
+Predictors highly correlated.
+Affects regression.
+Unstable coefficients.
+Detected via correlation.
+
+### **59. GroupBy**
+
+Groups data.
+Apply functions.
+Used with aggregation.
+Example: sum.
+
+### **60. Aggregation**
+
+Summarizes data.
+Functions like mean.
+Reduces size.
+Used in GroupBy.
+
+---
+
+## 🔹 **Visualization (Matplotlib, Seaborn, Plotly)**
+
+### **61. Matplotlib vs Seaborn**
+
+Matplotlib basic.
+Seaborn stylish.
+Seaborn built on Matplotlib.
+Better visuals.
+
+### **62. Histogram vs Bar**
+
+Histogram: distribution.
+Bar: categories.
+Histogram continuous.
+Bar discrete.
+
+### **63. Boxplot**
+
+Shows spread.
+Median & quartiles.
+Detects outliers.
+Comparison tool.
+
+### **64. Scatter plot**
+
+Shows relationship.
+Detects correlation.
+Finds outliers.
+Bivariate analysis.
+
+### **65. Plotly**
+
+Interactive plotting library.
+Hover, zoom support.
+Used in dashboards.
+Web-friendly.
+
+### **66. Dash**
+
+Web framework.
+Built on Plotly.
+Python-only dashboards.
+Interactive apps.
+
+---
+
+## 🔹 **Time Series**
+
+### **67. Time series**
+
+Data over time.
+Order matters.
+Example: stock price.
+Timestamp based.
+
+### **68. Components**
+
+Trend, seasonality, noise.
+Trend: direction.
+Seasonality: repetition.
+Noise: randomness.
+
+### **69. Stationary vs Non-stationary**
+
+Stationary: constant mean.
+Non-stationary: changing.
+Most models need stationary.
+Differencing helps.
+
+### **70. ARIMA**
+
+Forecasting model.
+AR + I + MA.
+Used in time series.
+Predicts future.
+
+---
+
+## 🔹 **NLP**
+
+### **71. NLP**
+
+Processing human language.
+Text & speech analysis.
+Used in chatbots.
+AI field.
+
+### **72. Tokenization**
+
+Splitting text.
+Words become tokens.
+First NLP step.
+Simplifies processing.
+
+### **73. Stopwords**
+
+Common words.
+Low importance.
+Removed in NLP.
+Example: the, is.
+
+### **74. Stemming vs Lemmatization**
+
+Stemming cuts words.
+Lemmatization gives root.
+Stemming fast.
+Lemmatization accurate.
+
+### **75. Sentiment analysis**
+
+Detects emotion.
+Positive/negative.
+Used in reviews.
+Opinion mining.
+
+---
+
+## 🔹 **Deep Learning**
+
+### **76. Deep Learning**
+
+Subset of ML.
+Uses deep neural networks.
+Learns complex patterns.
+Used in vision.
+
+### **77. ML vs DL**
+
+ML uses simple models.
+DL uses deep networks.
+DL needs more data.
+Higher accuracy.
+
+### **78. Neural Network**
+
+Inspired by brain.
+Neurons & layers.
+Processes input.
+Makes predictions.
+
+### **79. Weights & Bias**
+
+Weights control importance.
+Bias shifts output.
+Learned during training.
+Improve fit.
+
+### **80. Activation function**
+
+Adds non-linearity.
+Controls neuron output.
+Examples: ReLU, sigmoid.
+Essential for learning.
+
+### **81. Backpropagation**
+
+Updates weights.
+Minimizes error.
+Uses gradients.
+Training method.
+
+### **82. Why GPU?**
+
+Parallel processing.
+Faster computation.
+Handles large data.
+Speeds training.
+
+---
+
+✅ **This is your FULL, SINGLE-COPY VIVA ANSWER SET**
+If you want:
+
+* **PDF**
+* **One-page ultra-short revision**
+* **MCQs**
+* **Diagrams explanation**
+
+Just tell me 👍
