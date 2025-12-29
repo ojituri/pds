@@ -1,0 +1,122 @@
+NAME: GANESH
+
+===========================================
+PROGRAM 1: COUNT FREQUENCY OF EACH ELEMENT IN AN ARRAY
+===========================================
+
+#include <stdio.h>
+
+int main() {
+    int arr[] = {1, 2, 2, 3, 1, 4, 2};
+    int n = 7;
+    int visited[7] = {0};
+
+    for (int i = 0; i < n; i++) {
+
+        if (visited[i] == 1)
+            continue;
+
+        int count = 1;
+
+        for (int j = i + 1; j < n; j++) {
+            if (arr[i] == arr[j]) {
+                count++;
+                visited[j] = 1;
+            }
+        }
+
+        printf("%d occurs %d times\n", arr[i], count);
+    }
+
+    return 0;
+}
+
+--------------------------------------------------
+
+===========================================
+PROGRAM 2: FIND THE LONGEST WORD IN A STRING
+===========================================
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100], word[20], longest[20];
+    int i = 0, j = 0, maxLen = 0;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    while (1) {
+        if (str[i] != ' ' && str[i] != '\0') {
+            word[j++] = str[i];
+        } else {
+            word[j] = '\0';
+
+            if (strlen(word) > maxLen) {
+                maxLen = strlen(word);
+                strcpy(longest, word);
+            }
+
+            j = 0;
+        }
+
+        if (str[i] == '\0')
+            break;
+
+        i++;
+    }
+
+    printf("Longest word: %s", longest);
+    return 0;
+}
+
+--------------------------------------------------
+
+===========================================
+PROGRAM 3: DETECT LOOP IN LINKED LIST
+===========================================
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* createNode(int value) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = value;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Function to detect loop using Floyd’s Cycle Detection
+int detectLoop(struct Node* head) {
+    struct Node* slow = head;
+    struct Node* fast = head;
+
+    while (slow && fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if (slow == fast)
+            return 1;   // Loop detected
+    }
+    return 0;   // No loop
+}
+
+int main() {
+    struct Node* head = createNode(1);
+    head->next = createNode(2);
+    head->next->next = createNode(3);
+    head->next->next->next = head;   // Creating loop
+
+    if (detectLoop(head))
+        printf("Loop detected in linked list");
+    else
+        printf("No loop detected");
+
+    return 0;
+}
