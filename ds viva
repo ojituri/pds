@@ -1,0 +1,687 @@
+Below is a **complete viva-ready answer set**, written in **simple words**, **point-wise**, and **easy to remember**, suitable for **8–10 mark oral answers**.
+You can **directly speak these answers in viva**.
+
+---
+
+# 1. Foundations of Data Structures
+
+### 1. What is a data structure and why is it important?
+
+* A data structure is a way to **store, organize, and manage data**.
+* It helps in **efficient data access, insertion, deletion, and searching**.
+* Example: Array stores data in contiguous memory.
+
+### 2. Why are data structures critical for AI and large-scale systems?
+
+* AI systems handle **huge data**.
+* Efficient data structures reduce **time and memory usage**.
+* Example: Graphs in social networks, Trees in decision making.
+
+### 3. ADT vs Data Structure
+
+* **ADT**: Logical description (what operations).
+* **Data Structure**: Physical implementation (how operations).
+* Example: Stack is ADT, array-stack is data structure.
+
+### 4. What is time complexity?
+
+* Measures **execution time growth** with input size.
+* Helps choose **efficient algorithms**.
+
+### 5. Space complexity with example
+
+* Measures **memory usage**.
+* Example: Recursive function uses extra stack memory.
+
+### 6. Big-O notation
+
+* Describes **upper bound** of time.
+* Example:
+
+  * O(1): Access array element
+  * O(n): Linear search
+
+### 7. Big-O vs Θ vs Ω
+
+* **Big-O**: Worst case
+* **Theta (Θ)**: Average case
+* **Omega (Ω)**: Best case
+
+### 8. Why worst-case analysis preferred?
+
+* Guarantees **maximum time limit**.
+* Avoids system failure in real-world applications.
+
+### 9. Effect on scalability in AI
+
+* Poor complexity = slow AI models.
+* Efficient algorithms scale well with data growth.
+
+### 10. Wrong data structure example
+
+* Using array for frequent insertions → slow.
+* Linked list is better.
+
+---
+
+# 2. Arrays and Strings
+
+### Arrays
+
+### 1. Static vs Dynamic arrays
+
+* Static: Fixed size
+* Dynamic: Size can change (malloc/new)
+
+### 2. Memory allocation in arrays
+
+* Contiguous memory allocation.
+
+### 3. Efficient vs costly operations
+
+* Efficient: Access O(1)
+* Costly: Insert/Delete O(n)
+
+### 4. When prefer arrays over linked list?
+
+* When **fast access** is required.
+
+### 5. Can arrays store different data types?
+
+* No, arrays are **homogeneous**.
+
+### 6. 2D array implementation
+
+* `int a[3][3];`
+
+### 7. O(1) operation
+
+* Access by index.
+
+### 8. Arrays not suitable
+
+* Frequent insertions/deletions.
+
+### Strings
+
+### 9. Elements of string
+
+* Characters + null character `\0`.
+
+### 10. Mutable vs immutable strings
+
+* Mutable: Can change (C)
+* Immutable: Cannot change (Java, Python)
+
+### 11. String comparison
+
+* Character by character comparison.
+
+### 12. String concatenation
+
+* Joining two strings.
+* Time complexity: O(n)
+
+### 13. KMP Algorithm
+
+* Uses **LPS array**.
+* Avoids rechecking characters.
+* Time: O(n + m)
+
+### 14. Rabin-Karp Algorithm
+
+* Uses **hashing**.
+* Faster for multiple pattern search.
+
+### 15. KMP vs Rabin-Karp
+
+* KMP: Deterministic
+* Rabin-Karp: Hash based
+
+### 16. Strings in sentiment analysis
+
+* Tokenization, stop-word removal, stemming.
+
+### 17. Why strings are arrays?
+
+* Stored as array of characters.
+
+### 18. When use Rabin-Karp?
+
+* Multiple pattern matching.
+
+---
+
+# 3. Searching and Sorting
+
+### 1. Linear search
+
+* Sequential search.
+* Used for small or unsorted data.
+
+### 2. Binary search
+
+* Divide and conquer.
+* Requires **sorted array**.
+* Time: O(log n)
+
+### 3. Linear vs Binary
+
+* Linear: O(n)
+* Binary: O(log n)
+
+### 4. Bubble sort
+
+* Repeated swapping.
+* Time: O(n²)
+
+### 5. Insertion sort
+
+* Inserts element at correct position.
+* Used for **small datasets**.
+
+### 6. Merge sort
+
+* Divide and conquer.
+* Stable, O(n log n)
+
+### 7. Quick sort
+
+* Pivot-based sorting.
+* Average: O(n log n)
+
+### 8. Why quick sort fast?
+
+* In-place sorting.
+* Cache friendly.
+
+### 9. Merge vs Quick
+
+* Merge: Extra memory
+* Quick: Faster in practice
+
+### 10. Sorting in AI
+
+* Required for normalization, ranking, preprocessing.
+
+---
+
+# 4. Stacks
+
+### 1. Stack (LIFO)
+
+* Last In First Out.
+
+### 2. Stack using array
+
+* Fixed size.
+
+### 3. Stack using linked list
+
+* Dynamic size.
+
+### 4. Overflow & underflow
+
+* Overflow: Stack full
+* Underflow: Stack empty
+
+### 5. Push & Pop
+
+* Push: Insert
+* Pop: Remove
+
+### 6. Expression evaluation
+
+* Postfix evaluation using stack.
+
+### 7. Why postfix efficient?
+
+* No precedence handling.
+
+### 8. Function calls
+
+* Uses call stack.
+
+### 9. Backtracking
+
+* Undo previous step.
+* Example: N-Queens.
+
+### 10. Real-world example
+
+* Undo-Redo, browser back.
+
+---
+
+# 5. Linked Lists
+
+### 1. Linked list
+
+* Non-contiguous memory.
+
+### 2. Node elements
+
+* Data + pointer.
+
+### 3. Singly vs doubly vs circular
+
+* Singly: One pointer
+* Doubly: Two pointers
+* Circular: Last points to first
+
+### 4. Insertions
+
+* Head, tail, middle.
+
+### 5. Deletion
+
+* Adjust pointers.
+
+### 6. Traversal
+
+* Move node by node.
+
+### 7. Memory management
+
+* Dynamic allocation.
+
+### 8. Why linked list?
+
+* Easy insertion/deletion.
+
+### 9. Stack using linked list
+
+* Push at head.
+
+### 10. Real-world example
+
+* Music playlist.
+
+---
+
+# 6. Trees
+
+### 1. Tree definition
+
+* Hierarchical structure.
+
+### 2. Binary tree
+
+* Max two children.
+
+### 3. BST
+
+* Left < Root < Right.
+
+### 4. Traversals
+
+* Preorder, Inorder, Postorder.
+
+### 5. Level order
+
+* BFS traversal.
+
+### 6. AVL tree
+
+* Self-balancing BST.
+
+### 7. AVL vs Red-Black
+
+* AVL more strict.
+
+### 8. B-Tree
+
+* Used in databases.
+
+### 9. Trees in AI
+
+* Decision trees.
+
+### 10. Database indexing
+
+* B+ trees.
+
+---
+
+# 7. Trie & Suffix Trees
+
+### 1. Trie
+
+* Prefix-based tree.
+
+### 2. Trie vs BST
+
+* Trie faster for strings.
+
+### 3. Insertion & search
+
+* Character by character.
+
+### 4. Suffix tree
+
+* Stores all suffixes.
+
+### 5. String matching
+
+* Efficient prefix search.
+
+### 6. Trie vs hashing
+
+* Trie supports prefix search.
+
+### 7. Auto-complete
+
+* Trie based.
+
+### 8. NLP usage
+
+* Dictionary, spell checker.
+
+### 9. Dictionary-based AI
+
+* Word matching systems.
+
+### 10. Why efficient?
+
+* O(length of word).
+
+---
+
+# 8. Queues
+
+### 1. Queue (FIFO)
+
+* First In First Out.
+
+### 2. Circular queue
+
+* Efficient memory usage.
+
+### 3. Deque
+
+* Insert/delete both ends.
+
+### 4. Priority queue
+
+* Based on priority.
+
+### 5. Heap implementation
+
+* Binary heap.
+
+### 6. Min vs Max heap
+
+* Min: smallest first
+* Max: largest first
+
+### 7. Heapify
+
+* Convert array to heap.
+
+### 8. Task scheduling
+
+* Queue based.
+
+### 9. AI planning
+
+* BFS uses queue.
+
+### 10. OS usage
+
+* CPU scheduling.
+
+---
+
+# 9. Slurm (HPC)
+
+### 1. Slurm
+
+* Job scheduler.
+
+### 2. Job scheduling
+
+* Assign jobs to nodes.
+
+### 3. Batch vs interactive
+
+* Batch: queued
+* Interactive: immediate
+
+### 4. Compute node
+
+* Execution machine.
+
+### 5. Job queue
+
+* Waiting jobs list.
+
+### 6. Resource allocation
+
+* CPU, memory, GPU.
+
+### 7. Job preemption
+
+* Pause low priority job.
+
+### 8. AI training
+
+* GPU scheduling.
+
+### 9. Exceed resources
+
+* Job terminated.
+
+### 10. Importance
+
+* Efficient large-scale AI execution.
+
+---
+
+# 10. Graphs
+
+### 1. Graph
+
+* Nodes + edges.
+
+### 2. Adjacency matrix vs list
+
+* Matrix: Dense graphs
+* List: Sparse graphs
+
+### 3. BFS vs DFS
+
+* BFS: Queue
+* DFS: Stack
+
+### 4. Weighted graph
+
+* Edge has weight.
+
+### 5. Dijkstra
+
+* Shortest path.
+
+### 6. Bellman-Ford
+
+* Handles negative weights.
+
+### 7. Floyd-Warshall
+
+* All-pairs shortest path.
+
+### 8. MST
+
+* Minimum cost tree.
+
+### 9. AI pathfinding
+
+* Robot navigation.
+
+### 10. Sparse graph structure
+
+* Adjacency list.
+
+---
+
+# 11. Disjoint Set & MST
+
+### 1. Disjoint set
+
+* Collection of sets.
+
+### 2. Union & Find
+
+* Merge and search sets.
+
+### 3. Path compression
+
+* Faster find.
+
+### 4. Union by rank
+
+* Smaller tree attaches.
+
+### 5. Kruskal
+
+* MST using sorting.
+
+### 6. Why union-find?
+
+* Avoid cycles.
+
+### 7. MST
+
+* Minimum total cost.
+
+### 8. Applications
+
+* Network design.
+
+### 9. Clustering
+
+* Group similar data.
+
+### 10. Connected components
+
+* Isolated subgraphs.
+
+---
+
+# 12. Hashing
+
+### 1. Hashing
+
+* Maps key to index.
+
+### 2. Hash function
+
+* Converts key to hash value.
+
+### 3. Hash table
+
+* Array + hash function.
+
+### 4. Collision
+
+* Same hash index.
+
+### 5. Open addressing
+
+* Search next free slot.
+
+### 6. Chaining
+
+* Linked list at index.
+
+### 7. Linear vs Quadratic probing
+
+* Quadratic reduces clustering.
+
+### 8. Load factor
+
+* Entries / table size.
+
+### 9. AI usage
+
+* Feature hashing.
+
+### 10. Limitations
+
+* Collisions, no order.
+
+---
+
+# 13. Special Data Structures
+
+### 1. Bloom filter
+
+* Probabilistic structure.
+
+### 2. Why probabilistic?
+
+* False positives allowed.
+
+### 3. False positives
+
+* Says present when not.
+
+### 4. AI usage
+
+* Cache, filtering.
+
+### 5. Skip list
+
+* Layered linked list.
+
+### 6. Search efficiency
+
+* O(log n)
+
+### 7. Splay tree
+
+* Recently used moves to root.
+
+### 8. Treaps
+
+* Tree + heap.
+
+### 9. Fibonacci heap
+
+* Faster decrease-key.
+
+### 10. Self-adjusting benefit
+
+* Adaptive to usage patterns.
+
+---
+
+# Scenario-Based Answers (Very Important)
+
+| Scenario         | Data Structure     | Reason              |
+| ---------------- | ------------------ | ------------------- |
+| Chat app         | Hash + Linked List | Fast insert/search  |
+| Undo-Redo        | Stack              | LIFO                |
+| Auto-complete    | Trie               | Prefix search       |
+| CPU scheduling   | Priority Queue     | Priority handling   |
+| GPS              | Graph + Dijkstra   | Shortest path       |
+| Social network   | Graph              | Relationships       |
+| Static dataset   | Sorted array       | Fast search         |
+| Memory allocator | Linked list        | Dynamic             |
+| Expression eval  | Stack              | Operator precedence |
+| DB indexing      | B-Tree             | Disk friendly       |
+| Duplicate check  | Hash Set           | O(1)                |
+| Clustering       | Disjoint Set       | Grouping            |
+| Cache            | Hash + DLL         | LRU                 |
+| Spell checker    | Trie               | Word matching       |
+| Log analysis     | Bloom filter       | Memory efficient    |
+
+---
+
+If you want, I can also give:
+
+* **One-line viva answers**
+* **Last-minute revision sheet**
+* **Only AI-focused viva questions**
+* **Mock viva Q&A**
+
+Just tell me 👍
