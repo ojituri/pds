@@ -1,0 +1,616 @@
+Perfect 👍
+Below are **COMPLETE VIVA QUESTIONS with SHORT, EXAM-READY ANSWERS**, **strictly based on your given practical syllabus**.
+Answers are in **simple words**, **2–3 lines**, exactly how examiners expect.
+
+---
+
+# 🔹 GENERAL MACHINE LEARNING VIVA
+
+### 1. What is Machine Learning?
+
+Machine Learning is a technique where computers learn patterns from data and make predictions without being explicitly programmed.
+
+### 2. Types of Machine Learning?
+
+* Supervised Learning
+* Unsupervised Learning
+* Reinforcement Learning
+
+### 3. What is supervised learning?
+
+It is learning using labeled data where input and output are known.
+
+### 4. What is a dataset?
+
+A dataset is a collection of data used to train and test a machine learning model.
+
+### 5. What are features and labels?
+
+* Features: Input variables
+* Labels: Output or target variable
+
+---
+
+# 🔹 DATA PREPROCESSING & EDA
+
+### 6. What is data preprocessing?
+
+It is the process of cleaning and transforming raw data before training a model.
+
+### 7. Why preprocessing is required?
+
+To improve data quality and model accuracy.
+
+### 8. What is missing data?
+
+Data values that are not available or not recorded.
+
+### 9. How do you handle missing values?
+
+Using mean, median, mode, or deletion methods.
+
+### 10. What is feature scaling?
+
+Transforming features to a common scale.
+
+### 11. Types of feature scaling?
+
+* Standardization
+* Normalization
+
+### 12. What is EDA?
+
+Exploratory Data Analysis is used to understand data patterns, trends, and outliers.
+
+### 13. What tools are used for EDA?
+
+Pandas, Matplotlib, Seaborn.
+
+---
+
+# 🔹 TRAIN–TEST SPLIT
+
+### 14. Why do we split data?
+
+To test the model on unseen data.
+
+### 15. Typical train-test split ratio?
+
+80% training and 20% testing.
+
+---
+
+# 🔹 KNN (K-NEAREST NEIGHBORS)
+
+### 16. What is KNN?
+
+KNN is a distance-based algorithm that classifies data using nearest neighbors.
+
+### 17. What is K in KNN?
+
+Number of nearest neighbors considered.
+
+### 18. Distance metrics used in KNN?
+
+* Euclidean
+* Manhattan
+
+### 19. Is KNN parametric or non-parametric?
+
+Non-parametric.
+
+### 20. Advantage of KNN?
+
+Simple and easy to implement.
+
+### 21. Disadvantage of KNN?
+
+Slow for large datasets.
+
+---
+
+# 🔹 LINEAR REGRESSION
+
+### 22. What is linear regression?
+
+A regression technique that predicts continuous values.
+
+### 23. Equation of linear regression?
+
+y = mx + c
+
+### 24. What is MSE?
+
+Mean Squared Error measures average squared prediction error.
+
+### 25. What is R² score?
+
+It shows how well the model explains variance in data.
+
+---
+
+# 🔹 LOGISTIC REGRESSION
+
+### 26. What is logistic regression?
+
+A classification algorithm used for binary outcomes.
+
+### 27. Sigmoid function?
+
+Maps values between 0 and 1.
+
+### 28. Output of logistic regression?
+
+Probability value.
+
+---
+
+# 🔹 SUPPORT VECTOR MACHINE (SVM)
+
+### 29. What is SVM?
+
+A classifier that finds the best decision boundary.
+
+### 30. What is hyperplane?
+
+A line or plane that separates classes.
+
+### 31. What is kernel?
+
+Function that converts non-linear data to linear.
+
+### 32. Types of kernels?
+
+* Linear
+* Polynomial
+* RBF
+
+### 33. What is C parameter?
+
+Controls margin and misclassification.
+
+---
+
+# 🔹 NAIVE BAYES
+
+### 34. What is Naive Bayes?
+
+A probabilistic classifier based on Bayes theorem.
+
+### 35. Why is it called naive?
+
+Assumes features are independent.
+
+### 36. Types of Naive Bayes?
+
+* Gaussian
+* Multinomial
+
+---
+
+# 🔹 DECISION TREE
+
+### 37. What is a decision tree?
+
+A tree-like model used for decision making.
+
+### 38. What is root node?
+
+The top node of a decision tree.
+
+### 39. What is overfitting?
+
+Model performs well on training but poorly on testing.
+
+### 40. How to prevent overfitting?
+
+Limit tree depth or use pruning.
+
+---
+
+# 🔹 RANDOM FOREST
+
+### 41. What is Random Forest?
+
+An ensemble of multiple decision trees.
+
+### 42. Advantage of Random Forest?
+
+Reduces overfitting.
+
+### 43. What is feature importance?
+
+Measure of feature contribution to prediction.
+
+---
+
+# 🔹 ADABOOST
+
+### 44. What is boosting?
+
+Combining weak learners to form strong learners.
+
+### 45. What is AdaBoost?
+
+Boosting algorithm that focuses on misclassified samples.
+
+---
+
+# 🔹 MODEL EVALUATION METRICS
+
+### 46. What is accuracy?
+
+Correct predictions / total predictions.
+
+### 47. What is precision?
+
+Correct positive predictions / total predicted positives.
+
+### 48. What is recall?
+
+Correct positive predictions / total actual positives.
+
+### 49. What is F1-score?
+
+Harmonic mean of precision and recall.
+
+### 50. What is confusion matrix?
+
+Table showing correct and incorrect predictions.
+
+---
+
+# 🔹 PCA & DIMENSIONALITY REDUCTION
+
+### 51. What is PCA?
+
+Technique to reduce dimensions while keeping important features.
+
+### 52. Why PCA is used?
+
+To reduce complexity and improve performance.
+
+---
+
+# 🔹 HYPERPARAMETER TUNING
+
+### 53. What is hyperparameter tuning?
+
+Selecting best model parameters.
+
+### 54. Examples of hyperparameters?
+
+K in KNN, C in SVM, depth in Decision Tree.
+
+---
+
+# 🔹 REAL-WORLD ML PROJECT
+
+### 55. What is a real-world ML pipeline?
+
+End-to-end process from data collection to deployment.
+
+### 56. What is model deployment?
+
+Making model available for real-time use.
+
+### 57. What is Flask?
+
+A Python web framework used to deploy ML models.
+
+---
+
+# 🔹 SKLEARN & PRACTICAL TOOLS
+
+### 58. What is scikit-learn?
+
+Python library for machine learning.
+
+### 59. Why sklearn is used?
+
+Easy, fast, and reliable ML implementation.
+
+### 60. Common sklearn datasets?
+
+Iris, Wine, Breast Cancer, Digits, Diabetes.
+
+---
+
+## ✅ **LAST-MINUTE VIVA TIPS**
+
+✔ Answer in **2–3 lines only**
+✔ Use **simple words**
+✔ Mention **dataset + algorithm** when possible
+✔ Be confident 😄
+
+---
+
+If you want:
+
+* 📄 **Printable PDF**
+* 🧠 **Most repeated viva questions**
+* 🎤 **Mock viva Q&A**
+* 📊 **Diagram explanations**
+
+Just say the word 👍
+
+
+Perfect 👍
+Below are **60 MORE VIVA QUESTIONS**, divided clearly by **difficulty level**, exactly as examiners do.
+
+✔ **20 Easy**
+✔ **20 Medium**
+✔ **20 Hard**
+✔ **Very short answers (1–3 lines)**
+✔ **Strictly based on your ML practical syllabus**
+
+---
+
+# 🟢 EASY LEVEL VIVA QUESTIONS (20)
+
+### 1. What is a feature?
+
+A feature is an input variable used to make predictions.
+
+### 2. What is a label?
+
+Label is the output or target variable.
+
+### 3. What is training data?
+
+Data used to train the machine learning model.
+
+### 4. What is testing data?
+
+Data used to evaluate model performance.
+
+### 5. What is sklearn?
+
+A Python library used for machine learning tasks.
+
+### 6. What is classification?
+
+Predicting categorical output values.
+
+### 7. What is regression?
+
+Predicting continuous numerical values.
+
+### 8. Name one classification dataset in sklearn.
+
+Iris dataset.
+
+### 9. Name one regression dataset in sklearn.
+
+Diabetes dataset.
+
+### 10. What is accuracy?
+
+Ratio of correct predictions to total predictions.
+
+### 11. What is preprocessing?
+
+Preparing raw data for model training.
+
+### 12. What is normalization?
+
+Scaling data between 0 and 1.
+
+### 13. What is standardization?
+
+Scaling data to mean 0 and standard deviation 1.
+
+### 14. What is overfitting?
+
+Model performs well on training data but poorly on test data.
+
+### 15. What is underfitting?
+
+Model fails to capture patterns in data.
+
+### 16. What is a model?
+
+Mathematical representation learned from data.
+
+### 17. What is prediction?
+
+Output generated by a trained model.
+
+### 18. What is EDA?
+
+Exploring and understanding data before modeling.
+
+### 19. What is train_test_split?
+
+Function to split data into training and testing sets.
+
+### 20. Why scaling is required?
+
+To make features comparable.
+
+---
+
+# 🟡 MEDIUM LEVEL VIVA QUESTIONS (20)
+
+### 21. Why KNN requires feature scaling?
+
+Because it uses distance calculations.
+
+### 22. What happens if K value is too small in KNN?
+
+Model may overfit.
+
+### 23. What happens if K value is too large?
+
+Model may underfit.
+
+### 24. What is Euclidean distance?
+
+Straight-line distance between two points.
+
+### 25. Why linear regression is called linear?
+
+Because it assumes linear relationship between variables.
+
+### 26. Difference between linear and logistic regression?
+
+Linear predicts continuous values, logistic predicts classes.
+
+### 27. Why sigmoid function is used?
+
+To convert values into probability.
+
+### 28. What is decision boundary?
+
+Line or surface separating classes.
+
+### 29. Why SVM is effective?
+
+It maximizes margin between classes.
+
+### 30. What is kernel trick?
+
+Converts non-linear data to linear space.
+
+### 31. Why Naive Bayes works well for text?
+
+Because it handles high-dimensional data efficiently.
+
+### 32. What assumption Naive Bayes makes?
+
+Features are independent.
+
+### 33. What is entropy in decision tree?
+
+Measure of impurity in data.
+
+### 34. What is Gini index?
+
+Metric to split data in decision tree.
+
+### 35. Why random forest is better than decision tree?
+
+It reduces overfitting.
+
+### 36. What is ensemble learning?
+
+Combining multiple models.
+
+### 37. What is boosting?
+
+Technique to improve weak learners.
+
+### 38. Why AdaBoost focuses on misclassified samples?
+
+To improve accuracy.
+
+### 39. What is confusion matrix?
+
+Table showing prediction results.
+
+### 40. Why F1-score is important?
+
+Balances precision and recall.
+
+---
+
+# 🔴 HARD LEVEL VIVA QUESTIONS (20)
+
+### 41. Why standardization is preferred over normalization in SVM?
+
+Because SVM is sensitive to feature scale.
+
+### 42. Why KNN is called lazy learner?
+
+It does not train explicitly.
+
+### 43. Why linear regression fails for non-linear data?
+
+Because it assumes linearity.
+
+### 44. What is multicollinearity?
+
+High correlation between independent features.
+
+### 45. Effect of multicollinearity?
+
+Unstable regression coefficients.
+
+### 46. Why logistic regression uses log-odds?
+
+To model probability of class.
+
+### 47. What is margin in SVM?
+
+Distance between hyperplane and nearest points.
+
+### 48. What is support vector?
+
+Closest data points to the hyperplane.
+
+### 49. Why Gaussian NB requires normal distribution?
+
+It assumes features follow Gaussian distribution.
+
+### 50. What is pruning in decision tree?
+
+Removing unnecessary branches.
+
+### 51. What is bias-variance tradeoff?
+
+Balance between underfitting and overfitting.
+
+### 52. Why random forest uses bootstrapping?
+
+To create diverse trees.
+
+### 53. What is feature importance in random forest?
+
+Measure of feature contribution.
+
+### 54. Why AdaBoost is sensitive to noise?
+
+It focuses heavily on misclassified points.
+
+### 55. What is PCA eigenvector?
+
+Direction of maximum variance.
+
+### 56. Why PCA reduces overfitting?
+
+By removing less important features.
+
+### 57. Difference between model parameter and hyperparameter?
+
+Parameter is learned, hyperparameter is set manually.
+
+### 58. What is grid search?
+
+Method to find best hyperparameters.
+
+### 59. Why cross-validation is better than single split?
+
+Provides robust evaluation.
+
+### 60. What is end-to-end ML pipeline?
+
+From data collection to deployment.
+
+---
+
+## ✅ **EXAMINER IMPRESSION TIP**
+
+If stuck, say:
+
+> “I used sklearn dataset, applied preprocessing, trained the model, and evaluated using accuracy and confusion matrix.”
+
+---
+
+If you want next:
+
+* 🔥 **Top 25 most repeated viva questions**
+* 📄 **PDF printable viva notes**
+* 🎤 **Mock viva (Q–A style)**
+* 🧠 **One-line cheat sheet**
+
+Just tell me 👍
