@@ -1,0 +1,973 @@
+```html
+<!-- Assignment 1: HTML -- Basic Tags, Portfolio, Survey Form -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Tags - Onkar Jituri</title>
+</head>
+<body>
+  <h1>Basic HTML Tags Demo</h1>
+  <p>This paragraph is written by Onkar Jituri.</p>
+  <a href="https://www.example.com">This is a sample link</a>
+  <marquee>Welcome to my HTML page - Onkar Jituri</marquee>
+
+  <!-- Simple Portfolio Page -->
+  <h1>Onkar Jituri</h1>
+  <h2>Student | MCA (Sem-1)</h2>
+
+  <h3>About Me</h3>
+  <p>I enjoy learning web development and creating simple projects.</p>
+
+  <h3>Skills</h3>
+  <ul>
+    <li>HTML & CSS</li>
+    <li>JavaScript</li>
+    <li>React (Beginner)</li>
+  </ul>
+
+  <h3>Contact</h3>
+  <p>Email: onkar@example.com</p>
+
+  <p>Portfolio created by Onkar Jituri.</p>
+
+  <!-- Survey Form -->
+  <h1>Student Survey Form</h1>
+  <form>
+    <label>Name:</label>
+    <input type="text" name="name" required><br><br>
+
+    <label>Age:</label>
+    <input type="number" name="age" min="1" max="100" required><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <br><br>
+
+    <label>Favorite Subject:</label>
+    <input type="text" name="subject"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p>Form created by Onkar Jituri.</p>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 1 (again): Basic HTML Tags – Text Formatting and Table Styling -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Tags and Table - Onkar Jituri</title>
+</head>
+<body>
+  <h1>Text Formatting Tags Demo</h1>
+
+  <p><b>Bold Text</b></p>
+  <p><i>Italic Text</i></p>
+  <p><u>Underlined Text</u></p>
+  <p><strong>Strong Text</strong></p>
+  <p><small>Small Text</small></p>
+  <p><mark>Marked Text</mark></p>
+  <p><em>Emphasized Text</em></p>
+  <p><del>Deleted Text</del></p>
+  <p><ins>Inserted Text</ins></p>
+  <p>H<sub>2</sub>O uses subscript</p>
+  <p>2<sup>3</sup> uses superscript</p>
+
+  <h2>Styled Table with Cellpadding and Cellspacing</h2>
+
+  <table border="1" cellpadding="10" cellspacing="5" style="border-collapse: collapse; background-color: #f9f9f9;">
+    <tr style="background-color: #ddd;">
+      <th>Student Name</th>
+      <th>Course</th>
+      <th>Year</th>
+    </tr>
+    <tr>
+      <td>Onkar Jituri</td>
+      <td>MCA</td>
+      <td>First Year</td>
+    </tr>
+    <tr>
+      <td>Sample Student</td>
+      <td>BCA</td>
+      <td>Third Year</td>
+    </tr>
+  </table>
+
+  <p>Page prepared by Onkar Jituri.</p>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 2: Forms With Different Attributes -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Student Training & Placement form</title>
+</head>
+<body>
+
+  <h1>Registration Form</h1>
+  <h2>Form Attributes - Onkar Jituri</h2>
+
+  <form action="#" method="post">
+    <label>Full Name:</label>
+    <input type="text" name="fullname" placeholder="Enter your name" required><br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" required><br><br>
+
+    <label>Password:</label>
+    <input type="password" name="password" minlength="6" maxlength="12" required><br><br>
+
+    <label>Phone:</label>
+    <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="10 digit number"><br><br>
+
+    <label>Date of Birth:</label>
+    <input type="date" name="dob"><br><br>
+
+    <label>Upload Photo:</label>
+    <input type="file" name="photo" accept="image/*"><br><br>
+
+    <input type="hidden" name="created_by" value="Onkar Jituri">
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <p>Form designed by Onkar Jituri.</p>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 3: HTML Select Elements -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select and Fieldset - Onkar Jituri</title>
+  <script>
+    function showAlert() {
+      alert("Form submitted by Onkar Jituri");
+    }
+  </script>
+</head>
+<body>
+  <h1>Feedback Form</h1>
+
+  <form onsubmit="showAlert(); return false;">
+    <fieldset>
+      <legend>Student Details</legend>
+
+      <label>Name:</label>
+      <input type="text" name="name" required><br><br>
+
+      <label>Course:</label>
+      <select name="course">
+        <option value="MCA">MCA</option>
+        <option value="BCA">BCA</option>
+        <option value="BSc CS">BSc CS</option>
+      </select><br><br>
+
+      <label>Semester:</label>
+      <select name="sem">
+        <option value="1">Sem 1</option>
+        <option value="2">Sem 2</option>
+        <option value="3">Sem 3</option>
+      </select><br><br>
+
+      <label>Feedback:</label><br>
+      <textarea name="feedback" rows="4" cols="40" placeholder="Write your feedback here"></textarea>
+      <br><br>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+      <button type="button" onclick="showAlert()">Click Me</button>
+    </fieldset>
+  </form>
+
+  <p>Page created by Onkar Jituri.</p>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 4: Different CSS Selectors & Menu Driven Application -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>College Website using HTML,CSS & JS</title>
+<style>
+  p { font-size: 25px; color: blueviolet; }
+  #heading { font-family: Consolas; color: rgb(19,61,201); font-size: 25px; }
+  .section { font-family: "Times New Roman", Times, serif; font-size: 25px; }
+  * { background-color: aliceblue; font-family: Consolas; }
+  h1,h2 { color:blue; font-size: 25px; }
+
+  body { font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; }
+  .container { width:90%; max-width:800px; min-width:400px; margin:20px auto; padding:20px; background:rgb(146,144,243); color:white; opacity:0.95; }
+  table { border-collapse:collapse; width:100%; margin-bottom:20px; }
+  th,td { border: solid black 1px; }
+  th { background-color: rgb(61,61,228); color: aliceblue; }
+  tr:hover { background-color: brown; opacity:0.7; }
+  .demo-img { width:70%; height:auto; }
+  .demo-img:hover { opacity:0.5; }
+  .custom-textSm { background: #fff; margin:20px auto; padding:20px; opacity:0.5; color:#000; font-style:bold; }
+
+  nav { background-color: yellow; }
+  nav ul { list-style-type:none; margin:0; padding:0; display:flex; }
+  nav ul li { flex:1; }
+  nav ul li a { display:block; text-align:center; padding:12px; color:black; font-size:15px; text-decoration:none; }
+  nav ul li a:hover { background-color: lightyellow; }
+
+  section { display:none; padding:20px; }
+  section.active { display:block; }
+  #home, #aboutus, #services, #ContactUs { background-color:#fff3a0; min-height:100vh; padding:20px; }
+  #services { font-family:'Times New Roman', Times, serif; font-style:italic; }
+  section, ul, li { font-size:20px; }
+  #ContactUs { background: linear-gradient(180deg,#fff9d6 0%,#fff3a8 100%); }
+</style>
+</head>
+<body>
+  <h1>CSS Selectors and Menu - Onkar Jituri</h1>
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('aboutus')">About</a></li>
+      <li><a href="#" onclick="showSection('services')">Services</a></li>
+      <li><a href="#" onclick="showSection('ContactUs')">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <div class="container">
+      <h2> MIT VPU Cricket Team Batsmen Averages</h2>
+      <table>
+        <tr><th>Batsmen</th><th>Runs</th><th>Average</th></tr>
+        <tr><td>Onkar</td><td>100</td><td>43.46</td></tr>
+        <tr><td>Musa</td><td>99</td><td>42.56</td></tr>
+      </table>
+      <div class="image-box">
+        <p>Be A Part of our Cricket Team Now !.</p>
+        <img src="BG-1.webp" class="demo-img" alt="demo">
+      </div>
+      <div class="custom-textSm">These Batting Averages are of highest run scorers from Past Tournaments 2024-25.</div>
+      <div class="custom-textms">New Tournaments will be conducted soon.</div>
+    </div>
+  </section>
+
+  <section id="aboutus">
+    <h1>This is About section</h1>
+    <p>We are MCA Students Learning to create menu driven Website.. Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  </section>
+
+  <section id="services">
+    <h1>Subject Topics in MCA</h1>
+    <ul>
+      <li>Full Stack Development</li>
+      <li>Machine Learning</li>
+      <li>Python Programming</li>
+      <li>Data Structures</li>
+    </ul>
+  </section>
+
+  <section id="ContactUs">
+    <h2 id="contact-heading">Contact Us</h2>
+    <p><strong>Office:</strong> 123, Main Street, Your City</p>
+    <p><strong>Email:</strong> hello@example.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+  </section>
+
+  <script>
+    function showSection(id) {
+      let section = document.querySelectorAll("section");
+      section.forEach((sec) => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 5: Integrated CSS Application (merge with Assignment 4) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>College Website using HTML,CSS & JS</title>
+<style>
+  /* (Same styles as Assignment 4 - menu + sections) */
+  body { font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; }
+  .container { width:90%; max-width:800px; min-width:400px; margin:20px auto; padding:20px; background:rgb(146,144,243); color:white; opacity:0.95; }
+  table { border-collapse:collapse; width:100%; margin-bottom:20px; }
+  th,td { border: solid black 1px; }
+  th { background-color: rgb(61,61,228); color: aliceblue; }
+  tr:hover { background-color: brown; opacity:0.7; }
+  .demo-img { width:70%; height:auto; }
+  .custom-textSm { background:#fff; margin:20px auto; padding:20px; opacity:0.5; color:#000; }
+  nav { background-color: yellow; }
+  nav ul { list-style-type:none; margin:0; padding:0; display:flex; }
+  nav ul li { flex:1; }
+  nav ul li a { display:block; text-align:center; padding:12px; color:black; font-size:15px; text-decoration:none; }
+  nav ul li a:hover { background-color: lightyellow; }
+  section { display:none; padding:20px; }
+  section.active { display:block; }
+  #home, #aboutus, #services, #ContactUs { background-color:#fff3a0; min-height:100vh; padding:20px; }
+</style>
+</head>
+<body>
+  <h1>CSS Selectors and Menu - Onkar Jituri</h1>
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('aboutus')">About</a></li>
+      <li><a href="#" onclick="showSection('services')">Services</a></li>
+      <li><a href="#" onclick="showSection('ContactUs')">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <div class="container">
+      <h2> MIT VPU Cricket Team Batsmen Averages</h2>
+      <table>
+        <tr><th>Batsmen</th><th>Runs</th><th>Average</th></tr>
+        <tr><td>Onkar</td><td>100</td><td>43.46</td></tr>
+        <tr><td>Musa</td><td>99</td><td>42.56</td></tr>
+      </table>
+      <div class="image-box">
+        <p>Be A Part of our Cricket Team Now !.</p>
+        <img src="BG-1.webp" class="demo-img" alt="demo">
+      </div>
+      <div class="custom-textSm">These Batting Averages are of highest run scorers from Past Tournaments 2024-25.</div>
+    </div>
+  </section>
+
+  <section id="aboutus">
+    <h1>This is About section</h1>
+    <p>We are MCA Students Learning to create menu driven Website.. Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  </section>
+
+  <section id="services">
+    <h1>Subject Topics in MCA</h1>
+    <ul>
+      <li>Full Stack Development</li>
+      <li>Machine Learning</li>
+      <li>Python Programming</li>
+      <li>Data Structures</li>
+    </ul>
+  </section>
+
+  <section id="ContactUs">
+    <h2 id="contact-heading">Contact Us</h2>
+    <p><strong>Office:</strong> 123, Main Street, Your City</p>
+    <p><strong>Email:</strong> hello@example.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+  </section>
+
+  <script>
+    function showSection(id) {
+      let section = document.querySelectorAll("section");
+      section.forEach((sec) => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 6: CSS Positioning and Overflow -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Positioning and Overflow - Onkar Jituri</title>
+  <style>
+    .box { width:200px; height:100px; background-color:#ffd9d9; border:1px solid #cc0000; position:relative; }
+    .inner { width:100px; height:50px; background-color:#fff2b3; position:absolute; top:20px; right:10px; }
+    .scroll-box { width:250px; height:100px; border:1px solid #333; overflow:auto; margin-top:20px; }
+  </style>
+</head>
+<body>
+  <h1>CSS Positioning and Overflow</h1>
+
+  <div class="box">
+    Outer Box
+    <div class="inner">Inner Box</div>
+  </div>
+
+  <div class="scroll-box">
+    This is an example of overflow with scroll. This text is longer than the box height so a scroll bar appears. This demo is created by Onkar Jituri for CSS positioning and overflow Assignment.
+  </div>
+
+  <p>Page by Onkar Jituri.</p>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 7: CSS Box Model -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box model Example by Onkar Jituri</title>
+  <style>
+    .box { width:200px; height:100px; background-color:lightblue; padding:20px; border:5px solid navy; margin:30px; }
+    body { font-family: Arial, sans-serif; }
+    .info { background-color:#fedb51; border-left:5px solid #ff9e03; padding:15px; margin-bottom:20px; }
+  </style>
+</head>
+<body>
+  <h2> Student info using css box model</h2>
+
+  <div class="info">
+    <p><b> Box Model in use - Student Layers :</b></p>
+    <ul>
+      <li> Content - Student Name : Mr. Onkar Jituri</li>
+      <li> Percentage - 85%</li>
+      <li> Branch - MCA</li>
+      <li> University - MIT VPU, Solapur</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    This is the content area.<br>
+    Padding = 20px<br>
+    Border = 5px<br>
+    Margin = 30px
+  </div>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 8: Pseudo Class, Bootstrap Button, Animated Button -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pseudo Class and Buttons - Onkar Jituri</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    a:hover { color: red; }
+    .animated-button { padding:10px 20px; background-color:#28a745; color:white; border:none; cursor:pointer; transition:transform 0.3s ease, background-color 0.3s ease; }
+    .animated-button:hover { transform:scale(1.1); background-color:#1e7e34; }
+  </style>
+</head>
+<body>
+  <h1>Pseudo Class and Buttons</h1>
+
+  <p>Created by Onkar Jituri.</p>
+
+  <p><a href="#">Hover over this link</a></p>
+
+  <button class="button-primary">Bootstrap Button</button>
+
+  <br><br>
+
+  <button class="animated-button">Animated Button</button>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 9: 2D Transformations -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 2D Transform Demo</title>
+  <style>
+    body { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background:#ffb9ef; padding:40px; margin:0; color:#d70e0e; }
+    h2,p { text-align:center; }
+    .container { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; align-items:center; margin-top:40px; }
+    .box { width:140px; height:140px; background:#ff0d0d; border:2px solid #4b2e2e; display:flex; justify-content:center; align-items:center; font-weight:bold; font-size:1.1em; color:#4b2e2e; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.05); transition:transform 0.5s ease-in-out; }
+    .rotate:hover { transform:rotate(15deg); }
+    .translate:hover { transform:translate(15px,25px); }
+    .scale:hover { transform:scale(1.3); }
+    .skew:hover { transform:skew(5deg,3deg); }
+    .combo:hover { transform:rotate(10deg) scale(1.2) translate(10px,20px); }
+  </style>
+</head>
+<body>
+  <h2>CSS 2D Transform Demo by Onkar Jituri</h2>
+  <p>Hover over each box to see the transform effect.</p>
+
+  <div class="container">
+    <div class="box rotate">Rotate</div>
+    <div class="box translate">Translate</div>
+    <div class="box scale">Scale</div>
+    <div class="box skew">Skew</div>
+    <div class="box combo">Combo</div>
+  </div>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 9 (part): Combined Attribute Selector demo -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simplified Attribute Selectors</title>
+  <style>
+    input[type='password']{ border:2px black solid; background-color:lightcyan; }
+    input[type='email']{ border:grey 2px solid; }
+    a[href*="google"]{ background-color:#f0f0f0; padding:2px 5px; }
+    img[src^="BG"]{ border:3px solid rgb(255,0,0); width:100px; }
+    img[src^="small"]{ border:3px solid rgb(229,255,0); width:100px; }
+    a[href$="report.pdf"]{ text-decoration:line-through; color:rgb(255,89,0); }
+    [title~="exa"]{ border:2px solid red; }
+    [title~="black"]{ border:2px solid black; }
+  </style>
+</head>
+<body>
+  <h1>CSS Attribute Selectors by Onkar Jituri</h1>
+
+  <p>1. Exact Match [type=""]:</p>
+  <input type="email"> Email
+  <input type="password"> password
+
+  <hr>
+
+  <p>2. Contains Substring [href*="google"]:</p>
+  <a href="http://google.com">Google Link (Styled)</a><br>
+  <a href="http://my-google-page.org">Another Google Link (Styled)</a><br>
+  <a href="http://yahoo.com">Yahoo Link (No Style)</a>
+
+  <hr>
+
+  <p>3. Starts With [src^="logo"]:</p>
+  <img src="small.png" alt="Styled Logo">
+  <img src="BG-1.webp" height="150px" width="150px" alt="Unstyled Image">
+
+  <hr>
+
+  <p>4. Ends With [href$=".pdf"]:</p>
+  <a href="/docs/report.pdf">PDF File (Strikethrough)</a><br>
+  <a href="/docs/report.docx">Word File (No Style)</a>
+
+  <hr>
+
+  <p>5. Contains Word [title~="red"]:</p>
+  <p title="red flower exa">This has the word "red" (Red Border)</p>
+  <p title="reddish color">This has "reddish," not the word "red" (No Border)</p>
+  <p title="black color example">This has "black," not the word "red" (Border)</p>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 10: JavaScript Events -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Events - Onkar Jituri</title>
+  <script>
+    function handleClick() {
+      document.getElementById("msg").innerText = "Button clicked by Onkar Jituri";
+    }
+    function handleMouseOver() {
+      document.getElementById("hoverBox").innerText = "Mouse over box";
+    }
+    function handleMouseOut() {
+      document.getElementById("hoverBox").innerText = "Mouse left box";
+    }
+    function handleInputChange() {
+      var value = document.getElementById("nameInput").value;
+      document.getElementById("nameShow").innerText = "You typed: " + value;
+    }
+    function handleKeyDown(event) {
+      document.getElementById("keyInfo").innerText = "Key pressed: " + event.key;
+    }
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      alert("Form submitted by Onkar Jituri");
+    }
+  </script>
+</head>
+<body onkeydown="handleKeyDown(event)">
+  <h1>JavaScript Events Demo</h1>
+
+  <button onclick="handleClick()">Click Me</button>
+  <p id="msg"></p>
+
+  <div id="hoverBox" onmouseover="handleMouseOver()" onmouseout="handleMouseOut()" style="width:200px;height:80px;border:1px solid #000;margin-top:10px;">
+    Move mouse here
+  </div>
+
+  <br>
+
+  <label>Type your name:</label>
+  <input type="text" id="nameInput" onchange="handleInputChange()">
+  <p id="nameShow"></p>
+
+  <p id="keyInfo"></p>
+
+  <form onsubmit="handleFormSubmit(event)">
+    <label>Email:</label>
+    <input type="email" required>
+    <button type="submit">Submit Form</button>
+  </form>
+
+  <p>Page by Onkar Jituri.</p>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 11: JavaScript String and Its Methods -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Methods - Onkar Jituri</title>
+  <script>
+    function runStringTasks() {
+      var output = "";
+
+      var text = "madam";
+      var reversed = text.split("").reverse().join("");
+      if (text === reversed) {
+        output += "Palindrome: " + text + "\n";
+      }
+
+      var sentence = "JavaScript strings are very useful";
+      var words = sentence.split(" ");
+      output += "Word count: " + words.length + "\n";
+      output += "First word: " + words[0] + "\n";
+      output += "Last word: " + words[words.length - 1] + "\n";
+
+      var str = "Hello from Onkar Jituri";
+      output += "Length: " + str.length + "\n";
+      output += "Index of 'Onkar': " + str.indexOf("Onkar") + "\n";
+
+      var replaced = str.replace("Hello", "Welcome");
+      output += "Replace: " + replaced + "\n";
+
+      var vowelText = "This is a sample string";
+      var count = 0;
+      var vowels = "aeiouAEIOU";
+      for (var i = 0; i < vowelText.length; i++) {
+        if (vowels.indexOf(vowelText[i]) !== -1) {
+          count++;
+        }
+      }
+      output += "Vowels in '" + vowelText + "': " + count + "\n";
+
+      document.getElementById("result").innerText = output;
+    }
+  </script>
+</head>
+<body onload="runStringTasks()">
+  <h1>JavaScript String Methods</h1>
+  <pre id="result"></pre>
+  <p>Program by Onkar Jituri.</p>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 12: JavaScript Conditional Statements -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conditional Statement Example</title>
+</head>
+<body>
+  <h1> Conditional statement by Onkar Jituri</h1>
+  <script>
+    // Program 1 : Check if positive or Negative
+    let num = parseInt(prompt("Enter a Number"));
+    if (num > 0) {
+      document.write(num + " Its positive<br><br>");
+      console.log(num + " Its positive");
+    }
+
+    // program 2 : if else even or odd
+    let num1 = parseInt(prompt("enter a number"));
+    if (num1 % 2 == 0) {
+      document.write(num1 + " Its even<br><br>");
+      console.log(num1 + " Its even");
+    } else {
+      console.log(num1 + " Its odd");
+      document.write(num1 + " Its odd<br><br>");
+    }
+
+    // Program 3 : Students Marks Grading
+    let marks = parseInt(prompt("enter marks : "));
+    if (marks >= 90) {
+      document.write(marks + " A+++<br><br>");
+    } else if (marks >= 70) {
+      document.write(marks + " A+<br><br>");
+    } else if (marks >= 60 && marks >= 55) {
+      document.write(marks + " B+<br><br>");
+    } else if (marks >= 50) {
+      document.write(marks + " B<br><br>");
+    } else {
+      document.write(" fails<br><br>");
+    }
+
+    // Ternary Operator - Eligible for Voting
+    let age1 = 50;
+    const result = (age1 >= 50) ? "  Eligible to Vote<br><br>" : "  You are not eligible to vote<br><br>";
+    document.write(result);
+
+    // Switch Statement - Day of Week
+    let day = 3;
+    let dayName;
+    switch (day) {
+      case 1: dayName = "Monday"; break;
+      case 2: dayName = "Tuesday"; break;
+      case 3: dayName = "Wednesday"; break;
+      case 4: dayName = "Thursday"; break;
+      case 5: dayName = "Friday"; break;
+      case 6: dayName = "Saturday"; break;
+      case 7: dayName = "Sunday"; break;
+      default: dayName = "Invalid day";
+    }
+    document.write("The Day is " + dayName);
+  </script>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 13: JavaScript Array (and Part 2 Student Marks Management) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Array in JavaScript - Onkar Jituri</title>
+</head>
+<body>
+  <h1>JavaScript Array Examples — Onkar Jituri</h1>
+
+  <p id="totalAvg"></p>
+
+  <script>
+    let colors = ['Red','Green','Blue','White'];
+    console.log(colors[0]);
+    console.log(colors[colors.length-1]);
+
+    let roll = [125062,125063,125064,125065,125066];
+    console.log(roll);
+    roll.push(125067);
+    console.log("After push:", roll);
+    roll.pop();
+    console.log("After pop:", roll);
+    roll.unshift(125061);
+    console.log("After unshift:", roll);
+    roll.shift();
+    console.log("After shift:", roll);
+
+    let names = ['Musa','Zaid','Arfaat','Sufi','Razzak','Onkar'];
+    for (let i = 0; i < names.length; i++) {
+      console.log("Name:", names[i]);
+    }
+
+    let marks = [60,70,50,90,95,100];
+    for (let i = 0; i < marks.length; i++) {
+      if (marks[i] > 90) {
+        console.log("High mark:", marks[i]);
+      }
+    }
+
+    // Student Marks Management using array
+    let mark = [45,89,78,90,45,76,67,98,95];
+    mark.sort((a, b) => a - b);
+    console.log("sorted marks:", mark);
+    console.log("reverse marks:", mark.slice().reverse());
+    console.log("slice marks:", mark.slice(0,3));
+    let pass = mark.filter(m => m >= 60);
+    console.log("filter marks (>=60):", pass);
+
+    // map function
+    let gracmarks = mark.map(m => m + 5);
+    console.log("marks after +5:", gracmarks);
+
+    // calculate total & avg using reduce and show in page
+    let total = mark.reduce(function(sum, m) { return sum + m; }, 0);
+    let avg = (total / mark.length).toFixed(2);
+
+    document.getElementById('totalAvg').innerText = 'Total = ' + total + ', Average = ' + avg;
+  </script>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 14: JavaScript Functions (Marks, Total, Average, Grade) -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Functions - Onkar Jituri</title>
+</head>
+<body>
+  <h2>Assignment 14 - Functions (By Onkar Jituri)</h2>
+  <script>
+    // Function to calculate total
+    function totalMarks(a, b, c) { return a + b + c; }
+
+    // Arrow function for average (ES6)
+    const averageMarks = (total) => total / 3;
+
+    // Function to calculate grade
+    function calculateGrade(avg) {
+      if (avg >= 75) return "Distinction";
+      else if (avg >= 60) return "First Class";
+      else if (avg >= 50) return "Second Class";
+      else if (avg >= 40) return "Pass";
+      else return "Fail";
+    }
+
+    // Input marks
+    let m1 = 78;
+    let m2 = 85;
+    let m3 = 66;
+
+    let total = totalMarks(m1, m2, m3);
+    let avg = averageMarks(total);
+    let grade = calculateGrade(avg);
+
+    // Output
+    document.write("Marks Entered: " + m1 + ", " + m2 + ", " + m3 + "<br><br>");
+    document.write("Total Marks: " + total + "<br>");
+    document.write("Average Marks: " + avg.toFixed(2) + "<br>");
+    document.write("Grade: " + grade + "<br><br>");
+    document.write("Program by: Onkar Jituri");
+  </script>
+</body>
+</html>
+```
+
+```html
+<!-- Assignment 15: JavaScript DOM Manipulation -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+  <h2 id="title">Welcome to DOM Manipulation by Onkar Jituri</h2>
+  <label class="labelText">Old Label Text</label>
+  <p>Paragraph Example</p>
+  <button id="changeBtn">Click to Change</button>
+
+  <script>
+    // 1. getElementById()
+    let title = document.getElementById("title");
+    // 2. getElementByClassName()
+    let label = document.getElementsByClassName("labelText")[0];
+    // 3. getElementByTagName()
+    let paragraph = document.getElementsByTagName("p")[0];
+    // 4. querySelector()
+    let button = document.querySelector("#changeBtn");
+    // 5. querySelectorAll()
+    let allText = document.querySelectorAll("h2, label, p");
+
+    button.addEventListener("click", function() {
+      title.innerText = "DOM Manipulated Successfully!";
+      title.style.color = "blue";
+      title.style.fontSize = "26px";
+
+      label.innerText = "Label Changed using DOM Manipulation!";
+      label.style.color = "green";
+
+      paragraph.innerText = "This paragraph was updated dynamically!";
+      paragraph.style.color = "purple";
+
+      allText.forEach(el => {
+        el.style.border = "1px solid gray";
+        el.style.padding = "5px";
+        el.style.borderRadius = "6px";
+      });
+    });
+  </script>
+</body>
+</html>
+```
+
+```jsx
+// Assignment 16: React Application (App.jsx)
+import { useState } from "react";
+
+function Hello() {
+  return (
+    <div>
+      <h1>Hello World from React</h1>
+      <p>Created by Onkar Jituri</p>
+    </div>
+  );
+}
+
+function Student(props) {
+  return (
+    <div>
+      <h3>Name: {props.name}</h3>
+      <p>Course: {props.course}</p>
+    </div>
+  );
+}
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h2>Counter App</h2>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <button onClick={() => setCount(count - 1)}>Decrease</button>
+    </div>
+  );
+}
+
+function ToggleMessage() {
+  const [show, setShow] = useState(true);
+  return (
+    <div>
+      <h2>Toggle Message</h2>
+      <button onClick={() => setShow(!show)}>Toggle</button>
+      {show && <p>Welcome, Onkar Jituri</p>}
+    </div>
+  );
+}
+
+function StudentList() {
+  const students = ["Nawaz", "Ananya", "Onkar Jituri", "Shreyas"];
+  return (
+    <div>
+      <h2>Student List</h2>
+      <ul>
+        {students.map((name, index) => (
+          <li key={index}>{name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <div style={{ padding: "20px" }}>
+      <Hello />
+      <Student name="Advita" course="MCA" />
+      <Student name="Ananya" course="MBA" />
+      <Student name="Onkar Jituri" course="MCA" />
+      <Counter />
+      <ToggleMessage />
+      <StudentList />
+    </div>
+  );
+}
+```
+
