@@ -1,0 +1,339 @@
+Below are **VIVA QUESTIONS WITH ANSWERS** based **exactly on your given practical syllabus**.
+They are divided **LEVEL-WISE (Easy / Medium / Hard)** with **30 questions each (Total = 90)**.
+Answers are **simple, exam-friendly, and crisp** (perfect for practical viva).
+
+---
+
+# 🔹 EASY LEVEL VIVA (30 Questions)
+
+### HTML Basics
+
+1. **What is HTML?**
+   HTML is a markup language used to create the structure of web pages.
+
+2. **What are HTML tags?**
+   Tags are keywords enclosed in angle brackets used to define elements.
+
+3. **Difference between `<html>`, `<head>`, `<body>`?**
+   `<html>` is root, `<head>` stores metadata, `<body>` shows content.
+
+4. **What is an attribute in HTML?**
+   Attributes give extra information to tags (e.g., src, href).
+
+5. **What is `<a>` tag used for?**
+   To create hyperlinks.
+
+6. **Difference between ordered and unordered list?**
+   Ordered uses numbers, unordered uses bullets.
+
+7. **What is `<img>` tag used for?**
+   To display images on a webpage.
+
+8. **What is a table in HTML?**
+   It displays data in rows and columns.
+
+---
+
+### Forms
+
+9. **What is `<form>` tag?**
+   Used to collect user input.
+
+10. **Purpose of `required` attribute?**
+    Makes field mandatory.
+
+11. **Difference between radio and checkbox?**
+    Radio selects one, checkbox selects multiple.
+
+12. **What is `<select>` tag?**
+    Creates dropdown list.
+
+---
+
+### CSS Basics
+
+13. **What is CSS?**
+    CSS styles HTML elements.
+
+14. **What is inline CSS?**
+    CSS written inside HTML tag.
+
+15. **What is internal CSS?**
+    CSS written inside `<style>` tag.
+
+16. **What is external CSS?**
+    CSS written in separate file.
+
+17. **What is a selector?**
+    Used to select HTML elements for styling.
+
+18. **What is class selector?**
+    Styles multiple elements using `.class`.
+
+19. **What is ID selector?**
+    Styles single element using `#id`.
+
+20. **What is universal selector?**
+    Selects all elements using `*`.
+
+---
+
+### JavaScript Basics
+
+21. **What is JavaScript?**
+    A scripting language for web interactivity.
+
+22. **What is an event?**
+    An action performed by user (click, keypress).
+
+23. **What is `onclick` event?**
+    Triggered when user clicks.
+
+24. **What is a variable?**
+    Stores data values.
+
+25. **What is an array?**
+    Collection of values.
+
+26. **What is an object?**
+    Collection of key-value pairs.
+
+27. **What is DOM?**
+    Document Object Model – structure of webpage.
+
+28. **What is `alert()`?**
+    Displays popup message.
+
+---
+
+### React Basics
+
+29. **What is React?**
+    A JavaScript library for UI development.
+
+30. **What is a component?**
+    Reusable piece of UI.
+
+---
+
+# 🔹 MEDIUM LEVEL VIVA (30 Questions)
+
+### HTML & Forms
+
+31. **Difference between `<div>` and `<span>`?**
+    `div` is block, `span` is inline.
+
+32. **What is semantic HTML?**
+    HTML tags with meaning (header, footer).
+
+33. **What is placeholder attribute?**
+    Shows hint text inside input.
+
+34. **What is `maxlength` attribute?**
+    Limits input length.
+
+35. **What is `<optgroup>` used for?**
+    Groups options in dropdown.
+
+---
+
+### CSS
+
+36. **Difference between class and ID selector?**
+    Class can be reused, ID is unique.
+
+37. **What is box model?**
+    Content, padding, border, margin.
+
+38. **What is margin?**
+    Space outside element.
+
+39. **What is padding?**
+    Space inside element.
+
+40. **What is CSS positioning?**
+    Controls element placement.
+
+41. **Difference between static and relative?**
+    Static is default, relative moves from original position.
+
+42. **What is absolute positioning?**
+    Positioned relative to nearest parent.
+
+43. **What is fixed positioning?**
+    Stays fixed on screen.
+
+44. **What is overflow property?**
+    Controls content overflow.
+
+45. **Difference between overflow hidden and scroll?**
+    Hidden hides content, scroll adds scrollbar.
+
+46. **What is pseudo-class?**
+    Defines special state of element.
+
+47. **Example of pseudo-class?**
+    `:hover`
+
+48. **What is attribute selector?**
+    Selects element based on attributes.
+
+---
+
+### JavaScript
+
+49. **Difference between `==` and `===`?**
+    `===` checks value and type.
+
+50. **What is string method?**
+    Function applied on strings.
+
+51. **What is palindrome?**
+    Same forward and backward.
+
+52. **How do you count words in JS?**
+    Using `split()`.
+
+53. **What is conditional statement?**
+    Executes code based on condition.
+
+54. **Difference between if-else and switch?**
+    if-else checks ranges, switch checks exact values.
+
+55. **What is array traversal?**
+    Accessing each element.
+
+56. **What is `map()` in React?**
+    Used to render lists.
+
+---
+
+### React
+
+57. **What are props?**
+    Data passed to components.
+
+58. **What is useState hook?**
+    Manages state in function component.
+
+59. **What is conditional rendering?**
+    Displaying content based on condition.
+
+60. **Difference between JSX and HTML?**
+    JSX allows JavaScript expressions.
+
+---
+
+# 🔹 HARD LEVEL VIVA (30 Questions)
+
+### HTML & CSS
+
+61. **Why semantic HTML is important?**
+    Improves accessibility and SEO.
+
+62. **Difference between inline and block elements?**
+    Inline stays in line, block takes full width.
+
+63. **How CSS specificity works?**
+    ID > Class > Element.
+
+64. **What is z-index?**
+    Controls element stacking order.
+
+65. **What is sticky positioning?**
+    Acts relative then fixed.
+
+66. **Difference between visibility hidden and display none?**
+    Hidden keeps space, display none removes space.
+
+67. **What is CSS transition?**
+    Smooth change between states.
+
+68. **What is CSS animation?**
+    Creates keyframe-based effects.
+
+69. **Difference between transition and animation?**
+    Transition needs trigger, animation runs automatically.
+
+70. **What is Bootstrap?**
+    CSS framework for responsive design.
+
+---
+
+### JavaScript
+
+71. **What is event bubbling?**
+    Event flows from child to parent.
+
+72. **Difference between let and var?**
+    let has block scope.
+
+73. **What is arrow function?**
+    Short syntax for function.
+
+74. **What is DOM manipulation?**
+    Changing HTML using JS.
+
+75. **What is innerHTML?**
+    Changes HTML content.
+
+76. **Difference between push and pop?**
+    push adds, pop removes last element.
+
+77. **What is reduce()?**
+    Combines array values.
+
+78. **How to calculate average using array?**
+    Sum / length.
+
+79. **What is object method?**
+    Function inside object.
+
+80. **What is scope?**
+    Area where variable is accessible.
+
+---
+
+### React
+
+81. **Why React is faster?**
+    Uses virtual DOM.
+
+82. **What is virtual DOM?**
+    Lightweight copy of real DOM.
+
+83. **Difference between state and props?**
+    State is mutable, props are read-only.
+
+84. **Why keys are used in map()?**
+    Improves rendering performance.
+
+85. **What is component reusability?**
+    Using same component multiple times.
+
+86. **What happens when state changes?**
+    Component re-renders.
+
+87. **What is functional component?**
+    Component written as function.
+
+88. **What is lifting state up?**
+    Sharing state between components.
+
+89. **Difference between React and JS?**
+    React builds UI, JS is programming language.
+
+90. **Why hooks are used?**
+    To use state and lifecycle in functions.
+
+---
+
+## ✅ If you want:
+
+* **Only most important 40 viva Q&A**
+* **Printable PDF**
+* **One-line answers**
+* **React-only or JS-only viva**
+* **Mock viva questions (examiner style)**
+
+Just tell me 👍
